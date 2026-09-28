@@ -1,0 +1,153 @@
+/* PrintYourDay for wedding planners. One stylesheet for all four pages. */
+
+:root {
+  --bg: #faf3eb;            /* cream, the page background */
+  --text: #1a1612;          /* dark ink */
+  --accent: #5a6a45;        /* sage green, used for the phone button and links */
+  --font-body: "Outfit", system-ui, sans-serif;
+  --space: 16px;            /* every gap is a multiple of this */
+  --radius: 12px;           /* one corner radius, everywhere */
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+a { color: var(--accent); }
+
+h1, h2, h3 { line-height: 1.15; margin: 0 0 var(--space); }
+h1 { font-size: 2.25rem; font-weight: 600; }
+h2 { font-size: 1.5rem; font-weight: 600; }
+h3 { font-size: 1.125rem; font-weight: 600; }
+p { margin: 0 0 var(--space); }
+
+/* header and nav, the same on every page */
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space);
+  padding: var(--space) calc(var(--space) * 1.5);
+  border-bottom: 1px solid rgba(26, 22, 18, 0.12);
+}
+
+.brand {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.site-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space) calc(var(--space) * 1.5);
+}
+
+.site-nav a { color: var(--text); text-decoration: none; }
+.site-nav a:hover, .site-nav a[aria-current="page"] { text-decoration: underline; text-underline-offset: 4px; }
+
+.call {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: calc(var(--space) / 2) var(--space);
+  border-radius: var(--radius);
+  white-space: nowrap;
+}
+.call:hover { background: #4a5838; }
+
+/* page body */
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: calc(var(--space) * 2) calc(var(--space) * 1.5) calc(var(--space) * 4);
+}
+
+section { margin-bottom: calc(var(--space) * 3); }
+
+.hero img { border-radius: var(--radius); margin-bottom: var(--space); }
+.hero p { font-size: 1.25rem; max-width: 40ch; }
+
+/* the three reasons, one row on a laptop, stacked on a phone */
+
+.reasons {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: calc(var(--space) * 1.5);
+}
+.reasons li { border-top: 2px solid var(--text); padding-top: var(--space); }
+.reasons h3 { margin-bottom: calc(var(--space) / 2); }
+.reasons p { margin: 0; }
+
+/* prices, one row per product */
+
+.prices { border-collapse: collapse; width: 100%; max-width: 560px; }
+.prices th, .prices td { text-align: left; padding: calc(var(--space) * 0.75) 0; border-bottom: 1px solid rgba(26, 22, 18, 0.12); vertical-align: top; }
+.prices th { font-weight: 600; }
+.prices td:last-child, .prices th:last-child { text-align: right; white-space: nowrap; }
+
+/* gallery, two across on a phone, three on a laptop */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space);
+}
+.gallery figure { margin: 0; }
+.gallery img { aspect-ratio: 3 / 2; object-fit: cover; border-radius: var(--radius); }
+.gallery figcaption { font-size: 0.95rem; margin-top: calc(var(--space) / 2); }
+
+@media (min-width: 700px) {
+  .gallery { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* how it works, numbered steps */
+
+.steps { padding-left: 1.25em; max-width: 60ch; }
+.steps li { margin-bottom: var(--space); }
+
+/* contact */
+
+.contact-list { list-style: none; margin: 0; padding: 0; max-width: 60ch; }
+.contact-list li { padding: var(--space) 0; border-bottom: 1px solid rgba(26, 22, 18, 0.12); }
+.contact-list strong { display: block; }
+
+/* footer */
+
+.site-footer {
+  border-top: 1px solid rgba(26, 22, 18, 0.12);
+  padding: calc(var(--space) * 1.5);
+  font-size: 0.95rem;
+}
+.site-footer p { margin: 0 0 calc(var(--space) / 2); }
+
+/* phones */
+
+@media (max-width: 600px) {
+  body { font-size: 17px; }
+  h1 { font-size: 1.75rem; }
+  .site-header { padding: var(--space); }
+  .site-nav { order: 3; width: 100%; }
+  main { padding: calc(var(--space) * 1.5) var(--space) calc(var(--space) * 3); }
+}
