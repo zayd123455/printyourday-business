@@ -46,4 +46,5 @@ company, which must not appear (check 4).
 
 ## Client feedback
 
-Adam has the live link. His feedback, and what changed because of it, goes here.
+Adam has the live link. The feedback round is not done yet; Professor Li said
+that is fine for now. His notes, and what changes because of them, go here.
