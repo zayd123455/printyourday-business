@@ -83,7 +83,15 @@ main {
 
 section { margin-bottom: calc(var(--space) * 3); }
 
-.hero img { border-radius: var(--radius); margin-bottom: var(--space); }
+.hero img {
+  width: 100%;
+  aspect-ratio: 3 / 1;      /* the photo is 3:2, this crops it to a wide strip */
+  max-height: 320px;
+  object-position: center 42%; /* keep the faces, lose the ceiling and floor */
+  object-fit: cover;
+  border-radius: var(--radius);
+  margin-bottom: var(--space);
+}
 .hero p { font-size: 1.25rem; max-width: 40ch; }
 
 /* the three reasons, one row on a laptop, stacked on a phone */
