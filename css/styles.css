@@ -93,6 +93,7 @@ section { margin-bottom: calc(var(--space) * 3); }
   margin-bottom: var(--space);
 }
 .hero p { font-size: 1.25rem; max-width: 40ch; }
+.hero .order-online { font-size: 1rem; margin-top: var(--space); }
 
 /* the three reasons, one row on a laptop, stacked on a phone */
 
