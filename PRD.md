@@ -83,13 +83,18 @@ profiles for gallery first and one contact action.
 
 ## Out of scope
 
-- Online ordering, upload, checkout.
-- Consumer audiences (prom, graduation, birthdays).
+- Online ordering, upload, checkout. Those happen on printyourday.com, and the
+  home page links there (added after Adam's feedback, see FEEDBACK.md).
+- A full section per consumer event. The home page has one short "Not just
+  weddings" section instead.
 - A blog, reviews widget, or Instagram feed.
 
 ## Later
 
-- A quote request form (needs a server or a form service).
-- Planner price list once Adam confirms it.
-- Testimonials once Adam sends them.
-- A matching version of this site for restaurants and storefronts.
+In the order Adam ranked them on 9/30 (see FEEDBACK.md).
+
+1. A quote request form (needs a server or a form service). For now the home
+   page sends people to printyourday.com.
+2. A matching version of this site for restaurants and storefronts.
+3. Planner price list once Adam confirms it.
+4. Testimonials once Adam sends them.

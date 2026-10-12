@@ -46,5 +46,9 @@ company, which must not appear (check 4).
 
 ## Client feedback
 
-Adam has the live link. The feedback round is not done yet; Professor Li said
-that is fine for now. His notes, and what changes because of them, go here.
+Second conversation with Adam on 9/30, the day after the showcase. He wants the
+site to reach more than wedding planners and to send people who want to order
+themselves to printyourday.com. He also ranked the Later list. Everything he said,
+the decision on the quote form, and the change it led to (commit
+[`9bdef5d`](https://github.com/zayd123455/printyourday-business/commit/9bdef5d))
+are in [FEEDBACK.md](FEEDBACK.md).
